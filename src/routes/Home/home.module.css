@@ -1,0 +1,363 @@
+/* General styles and layout */
+body {
+    background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
+    
+}
+
+
+/******Home Div******/
+.homeDemo {
+    /* perspective: 800px;
+    transform-style: preserve3d; */
+    height: 100vh;
+    position: relative;
+   /*  left: 25%;
+    top: 53%; */
+    /* transform: translate(-50%, -50%); */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.showcase{
+    width: 725px;
+    
+    position: relative;
+}
+.showcase video {
+    width: 95%;
+    height: 23%;
+    position: absolute;
+    top: 35%;
+    left: 30px;
+    object-fit: cover;
+}
+.head{
+    /* color: #fff; */
+    font-size: 320px;
+    color: #FFF;
+    background-color: #000;
+    background: transparent;
+    /* mix-blend-mode: multiply; */
+    text-shadow: 12px 2px 0 crimson, 12px -2px 0 crimson, -2px 2px 0 crimson, -2px -2px 0 crimson, 12px 0px 0 crimson, 0px 2px 0 crimson, -2px 0px 0 crimson, 0px -2px 0 crimson;
+    animation: main 10s ease-out infinite; 
+}
+/*ParaDiv*/
+.para{
+    position: relative;
+    top: -230px;
+    margin-left: 10px;
+    padding: 5px 5px 5px 9px;
+    color: #fff;
+    background-color: rgb(33, 33, 30);
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.4em;
+    mix-blend-mode: lighten;
+    animation: main 10s ease-out infinite;
+}
+@keyframes main {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    89% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+} 
+
+/*bouncing ball at the background*/
+/* .ballSect{
+    position: absolute;
+    left: 50%;
+    top: 37%;
+
+}
+.bouncingBall {
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    background: rgb(242, 70, 31);
+    animation: bounce 1s;
+    transform: translateY(0px);
+    animation-iteration-count: infinite;
+    margin-top: 20em;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+}
+@keyframes bounce {
+    0% {
+        top: 0;
+        -webkit-animation-timing-function: ease-in;
+    }
+
+    40% {}
+
+    50% {
+        top: 140px;
+        height: 140px;
+        -webkit-animation-timing-function: ease-out;
+    }
+
+    55% {
+        top: 160px;
+        height: 120px;
+        -webkit-animation-timing-function: ease-in;
+    }
+
+    65% {
+        top: 120px;
+        height: 140px;
+        -webkit-animation-timing-function: ease-out;
+    }
+
+    95% {
+        top: 0;
+        -webkit-animation-timing-function: ease-in;
+    }
+
+    100% {
+        top: 0;
+        -webkit-animation-timing-function: ease-in;
+    }
+}
+.ballWords{
+    color: #fff;
+    font-size: 15px;
+    position: absolute;
+    top: 27%;
+    left: 18%;
+} */
+
+
+/*background video*/
+/* video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: "translate(-50%, -50%)";
+    z-index: -1;
+} */
+
+
+/* <h2 className={styles.byline} id="byline"><span className={styles.span1}>XBM</span><span>Gym and Boxing</span></h2>
+        <img className={styles.logo} src="gloves-png-image.png" alt="boxing gloves logo" /> */
+.byline {
+    color: #fff;
+    font-family: "ITC Serif Gothic", Lato;
+    font-size: 3.25em;
+    font-weight: 700;
+    /* left: -2em; */
+    letter-spacing: 0.4em;
+    right: -2em;
+    text-align: center;
+    text-transform: uppercase;
+    /* top: 29%; */
+    animation: move-byline 10s linear infinite;
+}
+
+.byline span {
+    display: inline-block;
+    animation: spin-letters 10s linear infinite;
+    /* font-size: 30px;
+    text-shadow: none; */
+}
+
+.byline .span1 {
+    font-size: 100px;
+    color: #FFFFFF;
+    text-shadow: 12px 2px 0 #4074b5, 12px -2px 0 #4074b5, -2px 2px 0 #4074b5, -2px -2px 0 #4074b5, 12px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+/* Animation properties */
+@keyframes spin-letters {
+
+    0%,
+    10% {
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    70%,
+    86% {
+        transform: rotateY(0);
+        opacity: 1;
+    }
+
+    95%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes move-byline {
+    0% {
+        transform: translateZ(5em);
+    }
+
+    100% {
+        transform: translateZ(0);
+    }
+}
+
+
+
+/******** Media queries for adjusting to different screen sizes *******/
+
+@media (min-width: 800px) and (max-width: 1100px) {
+    .head {
+      font-size: 250px;
+      text-align: center;
+    }
+    .para {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+@media (min-width: 600px) and (max-width: 799px) {
+    .head {
+      font-size: 200px;
+      text-align: center;
+    }
+    .para {
+        font-size: 15px;
+        text-align: center;
+        margin-top: 220px;
+    }
+}
+@media (min-width: 500px) and (max-width: 599px) {
+    .head {
+      font-size: 170px;
+      text-align: center;
+    }
+    .para {
+        font-size: 13px;
+        text-align: center;
+        margin-top: 220px;
+    }
+}
+@media (min-width: 400px) and (max-width: 499px) {
+    .head {
+      font-size: 150px;
+      text-align: center;
+    }
+    .para {
+        font-size: 11px;
+        text-align: center;
+        margin-top: 220px;
+    }
+}
+@media (min-width: 300px) and (max-width: 399px) {
+    .head {
+      font-size: 110px;
+      text-align: center;
+    }
+    .para {
+        font-size: 10px;
+        text-align: center;
+        margin-top: 220px;
+    }
+}
+@media (min-width: 200px) and (max-width: 299px) {
+    .head {
+      font-size: 80px;
+      padding-right: 3px;
+      text-align: center;
+    }
+    .para {
+        font-size: 8px;
+        text-align: center;
+        margin-top: 220px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+<div className={styles.textBox}>
+    <p className={styles.para}>Keeping fit is our business</p>
+</div>
+
+.textBox {
+    overflow: hidden;
+    background-color: #000;
+    padding: 20px;
+}
+.para{
+    position: relative;
+    top: -230px;
+    margin-left: 10px;
+    padding: 5px 5px 5px 9px;
+    color: #fff;
+    background-color: rgb(33, 33, 30);
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.4em;
+    mix-blend-mode: lighten;
+    animation: main 10s ease-out infinite;
+}
+.para::before, .para::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.para::before{
+    background-color: #000000;
+    animation: type 3s steps(25) 1s forwards infinite;
+    width: 100%;
+}
+.para::after{
+    opacity: 1;
+    width: 2px;
+    background-color: #fff;
+    color: #fff;
+    animation: type 3s steps(15) 1s forwards infinite,
+               blink 0.6s steps(5) infinite;
+}
+@keyframes type {
+    to {
+        left: 100%;
+    }
+}
+@keyframes blink {
+    0%, 50% {
+        opacity: 0;
+    }
+
+    51%, 100% {
+        opacity: 1;
+    }
+} */

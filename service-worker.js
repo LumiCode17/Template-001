@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Lumi4God/Template-001/precache-manifest.cc223f8f904853431ccb0df4c90697ab.js"
+  "/Template-001/precache-manifest.87909cbd685096cf59fbe8aa99dd9e3c.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Lumi4God/Template-001/index.html", {
+workbox.routing.registerNavigationRoute("/Template-001/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });

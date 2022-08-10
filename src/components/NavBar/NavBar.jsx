@@ -22,7 +22,7 @@ const Navbar = () => {
           <h2 className={styles.h2}>MBX</h2>
           <p className={styles.h2para}>Keeping fit is our business</p>
           <li>
-            <Link to={"/"}>
+            <Link to={"/home"}>
               Home
             </Link>{" "}
           </li>
